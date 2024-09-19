@@ -1,0 +1,33 @@
+
+{% extends 'admin/adminhome.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Category</title>
+
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Add New Category</h2>
+    <form method="post" action="">{% csrf_token %}
+        <table class="table">
+            <tr>
+                <th>Category</th>
+                <td><input type="text" class="form-control" required name="category" placeholder="Enter category name"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit"  name="submit" class="btn btn-info" value="Add Category">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
+{% endblock %}
